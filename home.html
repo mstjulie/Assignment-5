@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Tailwind & Daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font-awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <h1>hello</h1>
+    <nav class="flex justify-between items-center mx-auto pt-6">
+        <div class="flex justify-between pl-17 gap-2">
+            <img class="size-13" src="assets/github-logo.png" alt="">
+            <h1 class="text-4xl font-bold pt-2.5">GitHub Issues Tracker</h1>
+        </div>
+
+        <div class="pr-17">
+            <input type="text"  placeholder="Search issues" class="input input-bordered w-24 md:w-auto" />
+            <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>New Issue</button>
+        </div>
+    </nav>
+    <section class="border ">
+        <div class="bg-white p-6">
+            <button class="btn btn-soft btn-primary text-[#64748B]">Primary</button>
+       </div>
+        <div></div>
+        <div></div>
+
+    </section>        
+            
 </body>
 </html>
