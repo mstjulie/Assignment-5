@@ -1,37 +1,121 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Tailwind & Daisyui -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Issues Tracker</title>
 
-    <!-- font-awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Tailwind & DaisyUI -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+<style>
+    .post-card{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:15px;
+    box-shadow:1px 1px 6px rgba(0,0,0,0.1);
+    background:white;
+    }
+
+    .post-card p{
+    text-align:justify;
+    }
+
+</style>
 </head>
-<body>
-    <nav class="flex justify-between items-center mx-auto pt-6">
-        <div class="flex justify-between pl-17 gap-2">
-            <img class="size-13" src="assets/github-logo.png" alt="">
-            <h1 class="text-4xl font-bold pt-2.5">GitHub Issues Tracker</h1>
-        </div>
+<body class="bg-[#64748B]">
+    
+    <!-- Navbar -->
+<nav class="flex justify-between items-center max-w-screen-xl mx-auto pt-6 pb-6">
+    <div class="flex items-center gap-2">
+        <img class="size-12" src="assets/github-logo.png" alt="">
+        <h1 class="text-3xl font-bold">GitHub Issues Tracker</h1>
+    </div>
+    <div class="flex gap-3">
+        <input type="text" placeholder="Search issues"
+        class="input input-bordered w-48"/>
+        
+        <button class="btn btn-primary">
+        <i class="fa-solid fa-plus"></i> New Issue
+        </button>
+    </div>
+    
+</nav>
 
-        <div class="pr-17">
-            <input type="text"  placeholder="Search issues" class="input input-bordered w-24 md:w-auto" />
-            <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>New Issue</button>
+<!-- Filter Buttons -->
+<section>
+    <div class="max-w-screen-xl mx-auto mt-10 mb-6 bg-white rounded-md shadow-lg">
+        <div class="flex gap-5 p-6">
+            <button class="btn btn-soft btn-primary px-10" id="all-btn">All</button>
+            <button class="btn btn-soft btn-primary px-10" id="open-btn">Open</button>
+            <button class="btn btn-soft btn-primary px-10" id="closed-btn">Closed</button>
         </div>
-    </nav>
-    <section class="border ">
-        <div class="bg-white p-6">
-            <button class="btn btn-soft btn-primary text-[#64748B]">Primary</button>
+    </div>
+    
+    <!-- Issue Count -->
+    <div class="flex justify-between items-center max-w-screen-xl mx-auto rounded-md pt-6 pb-6 bg-white">
+        <div class="flex items-center pl-10 gap-3">
+            <img class="size-14 bg-slate-300 rounded-full"src="assets/Aperture.png">
+            <div>
+            <h1 id="issue-count"class="text-3xl font-bold text-[#64748B]"> 0 Issues</h1>
+            <p class="text-[#64748B]">Track and manage your project issues</p>
+           </div>
        </div>
-        <div></div>
-        <div></div>
 
-    </section>        
+        <div class="flex gap-4 pr-10">
+            <p class="font-bold">
+            <i class="fa-solid fa-circle text-green-500"></i> Open</p>
+            <p class="font-bold">
+            <i class="fa-solid fa-circle text-purple-500"></i>Closed </p>
+        </div>
+    </div>
+    
+    <!-- Issue Cards -->
+    <div class="max-w-screen-xl mx-auto mt-4 bg-white rounded-md shadow-lg pb-10">
+    
+        <div id="card-container">
             
+        </div>
+    </div>
+</section>
+    
+<script src="js/seked.js"></script>
+
 </body>
 </html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
